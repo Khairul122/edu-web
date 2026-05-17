@@ -7,10 +7,10 @@ class BottomNavbar extends HTMLElement {
         const activePage = this.getAttribute('active-page') || 'home';
         
         const navItems = [
-            { id: 'home', href: 'index.html', icon: 'home', label: 'Home' },
-            { id: 'lessons', href: 'module-ambuyat.html', icon: 'menu_book', label: 'Lessons' },
-            { id: 'lab', href: 'lab.html', icon: 'biotech', label: 'Lab' },
-            { id: 'gallery', href: 'community.html', icon: 'museum', label: 'Gallery' }
+            { id: 'home', href: '/', icon: 'home', label: 'Home' },
+            { id: 'lessons', href: '/module-ambuyat', icon: 'menu_book', label: 'Lessons' },
+            { id: 'lab', href: '/lab', icon: 'biotech', label: 'Lab' },
+            { id: 'gallery', href: '/community', icon: 'museum', label: 'Gallery' }
         ];
 
         let html = `
