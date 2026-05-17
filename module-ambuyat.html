@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AmvaChem Module 1: Ambuyat &amp; Gelatinization</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <style>
+        .linangkit-divider {
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='24' viewBox='0 0 60 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12L10 0L20 12L10 24L0 12Z' fill='%23442a22' fill-opacity='0.1'/%3E%3Cpath d='M20 12L30 0L40 12L30 24L20 12Z' fill='%23442a22' fill-opacity='0.1'/%3E%3Cpath d='M40 12L50 0L60 12L50 24L40 12Z' fill='%23442a22' fill-opacity='0.1'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-position: center;
+        }
+
+        .molecular-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 5L25 15L35 20L25 25L20 35L15 25L5 20L15 15Z' fill='%23442a22' fill-opacity='0.03'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden molecular-bg">
+    <!-- Progress Bar (Top) -->
+    <div class="fixed top-0 left-0 w-full h-1 z-[60] bg-surface-container">
+        <div class="h-full bg-secondary-container w-[35%] rounded-r-full transition-all duration-500"></div>
+    </div>
+    <!-- Header / TopAppBar -->
+    <header
+        class="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-sm h-16 flex items-center px-4">
+        <button
+            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 active:scale-95 duration-200">
+            <span class="material-symbols-outlined text-primary">arrow_back</span>
+        </button>
+        <h1 class="ml-2 font-headline-sm text-headline-sm text-primary flex-1 truncate">Ambuyat &amp; Gelatinization
+        </h1>
+        <button
+            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 active:scale-95 duration-200">
+            <span class="material-symbols-outlined text-primary">account_circle</span>
+        </button>
+    </header>
+    <main class="max-w-container-max mx-auto px-4 pt-6 pb-24 space-y-stack-lg">
+        <!-- Introduction Section -->
+        <section data-animate="up" class="space-y-stack-sm">
+            <div
+                class="inline-flex items-center px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-[14px] mr-1 icon-filled"
+                    >history_edu</span>
+                Cultural Context
+            </div>
+            <h2 class="font-headline-md text-headline-md text-primary">What is Ambuyat?</h2>
+            <div class="glass-card rounded-xl overflow-hidden">
+                <img class="w-full h-48 object-cover"
+                    data-alt="A macro close-up of traditional Sabahan Ambuyat being served in a wooden bowl with bamboo chandas. The scene is bathed in warm, natural morning sunlight, highlighting the translucent, gelatinous texture of the sago starch. The surrounding environment includes rustic elements like hand-woven Linangkit textiles and earthy ceramic dishes, creating a grounded, cultural atmosphere with a professional culinary photography style."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDbaR4iiv44h9CdkM_MhutL1FmpZhE-y8oO9TMNrnxuOR5P0hHWEai_pheaOpSfI_DFz-_J533w1Tbpx4WXcGiKdTCJoOUbGu7zeaoQfMVNziRiavspqSa50X4NR_A0P39-vcfFJhpfxGJPDwNh9XRp4q828F8w5QUPtUYlsd5xhtslFENee-lnm6D_IcJVOAdgs7g_paGFSD8kbky3f06_EWVP240AuooR_Jiooi9PgO2m1jWixt22PKyRAM4kVX_F4ihrJftAOf3" />
+                <div class="p-4 space-y-stack-sm">
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Ambuyat is the national dish of Brunei and a staple in the Sabahan districts of Beaufort and
+                        Kuala Penyu. Derived from the interior of the sago palm, this translucent starch is more than
+                        just food—it's a masterclass in culinary chemistry.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="linangkit-divider"></div>
+        <!-- Starch Structure Section -->
+        <section data-animate="up" class="space-y-stack-sm">
+            <h2 class="font-headline-md text-headline-md text-primary">Starch Structure</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">Sago starch is composed of two primary glucose
+                polymers:</p>
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Amylose Card -->
+                <div class="glass-card p-4 rounded-xl border-t-4 border-secondary">
+                    <div class="flex items-center mb-2">
+                        <span class="material-symbols-outlined text-secondary mr-2">polymer</span>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Amylose</h3>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4">Linear chains of glucose.
+                        Responsible for the firm set of cooled gels.</p>
+                    <div
+                        class="bg-surface-container-highest rounded-lg h-32 flex items-center justify-center overflow-hidden">
+                        <img class="max-w-full h-full object-contain mix-blend-multiply opacity-80"
+                            data-alt="A clean, scientific 3D illustration of a linear amylose molecular chain consisting of interconnected glucose units. The visualization uses a high-end laboratory aesthetic with soft blue and green glowing spheres against a translucent white backdrop. The lighting is clinical yet inviting, emphasizing the geometric precision of organic polymers in a modern educational context."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdM53OwIkePdvk5a-bo9CFunxDORBrHXrSjl4-6f1dS_f4rmlYYlYYpF_XYOUkTXfAJquQK_2p7kQkQTK3lAnOnhusRjuHXoCBkpsJEKVhFhzKKhFZHNW82_w6vnGpfVhP2tIKluMx18Hu_i8mbPWQKF93xuzrLUL56940ja970RIkz264fNlPo0lf9Qn-CiwPf1JAe3YQrWjBCVSgxdNKFcUg3nwoRfEI9R5KRraP3nQJvJ-CrZ3074b3p-eElvYjZnm9a5DO7Uel" />
+                    </div>
+                </div>
+                <!-- Amylopectin Card -->
+                <div class="glass-card p-4 rounded-xl border-t-4 border-tertiary-fixed-dim">
+                    <div class="flex items-center mb-2">
+                        <span class="material-symbols-outlined text-tertiary-fixed-dim mr-2">account_tree</span>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">Amylopectin</h3>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4">Highly branched chains. Provides
+                        the characteristic "sticky" stretch of Ambuyat.</p>
+                    <div
+                        class="bg-surface-container-highest rounded-lg h-32 flex items-center justify-center overflow-hidden">
+                        <img class="max-w-full h-full object-contain mix-blend-multiply opacity-80"
+                            data-alt="A detailed 3D molecular visualization of a branched amylopectin structure, showing complex radial glucose linkages. The style is sophisticated and academic, featuring a color palette of earth browns and vibrant lime greens. The image has a soft bokeh background and a high-resolution microscopic feel, perfect for an advanced chemistry learning platform."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk3JU_riPv5G2WTFydH4q_pWvBImy1ZAm7BjGqq6c4xsiTMF2B8s9WiPjEE0mIPvD4rMYkTog_8hW0OF-VzALVoontfpaTOQi9L_ib87Fx5ciWqM6RYy6nxDFgNChx2l04wOqQr4xZOIo0PgAJqflhNxHJkBqIBpRv7gZYge0ZtTatyyp0eDOWn04dGOSu62ajvahT5YMmftDiVw8XU_i0Y4Vh1xngpPv-eLPNmlQUpYjm8GOEaekqE1djKibRxsMbThDKAL6InIIY" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Process: Vertical Timeline -->
+        <section data-animate="up" class="space-y-stack-sm">
+            <h2 class="font-headline-md text-headline-md text-primary">The Process</h2>
+            <div
+                class="relative pl-8 space-y-8 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div
+                        class="absolute -left-[29px] top-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white z-10">
+                        <span class="material-symbols-outlined text-[16px]">thermostat</span>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl">
+                        <h4 class="font-headline-sm text-headline-sm text-primary">1. Heating</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Energy is applied to the
+                            starch-water mixture, weakening the hydrogen bonds between molecules.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div
+                        class="absolute -left-[29px] top-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-white z-10">
+                        <span class="material-symbols-outlined text-[16px]">water_drop</span>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl">
+                        <h4 class="font-headline-sm text-headline-sm text-primary">2. Swelling</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Water molecules penetrate the
+                            granules, causing them to expand significantly in volume.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div
+                        class="absolute -left-[29px] top-1 w-6 h-6 rounded-full bg-tertiary-fixed-dim flex items-center justify-center text-white z-10">
+                        <span class="material-symbols-outlined text-[16px]">vibration</span>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl">
+                        <h4 class="font-headline-sm text-headline-sm text-primary">3. Gelatinization</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant">The granules burst, releasing
+                            amylose. The mixture turns into a thick, translucent gel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Interactive Element: Temperature Slider -->
+        <section data-animate="up" class="space-y-stack-sm">
+            <div
+                class="glass-card p-6 rounded-2xl bg-gradient-to-br from-surface-container-low to-white shadow-lg border border-primary/10">
+                <div class="text-center mb-6">
+                    <h3 class="font-headline-sm text-headline-sm text-primary">Molecular Simulation</h3>
+                    <p class="font-label-md text-label-md text-secondary mt-1 uppercase tracking-widest">Active
+                        Temperature: <span id="temp-val">40</span>°C</p>
+                </div>
+                <!-- Starch Animation Placeholder -->
+                <div
+                    class="relative h-48 bg-surface-container-highest rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                    <!-- Representing starch granules that "expand" -->
+                    <div id="starch-granule"
+                        class="w-24 h-24 bg-primary/20 rounded-full border-2 border-primary/30 flex items-center justify-center transition-all duration-300 transform scale-100">
+                        <div class="w-16 h-16 bg-white/40 rounded-full blur-md"></div>
+                        <span class="material-symbols-outlined text-primary text-4xl opacity-40">bubble_chart</span>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+                        <div class="w-full h-full linangkit-divider opacity-50 scale-150"></div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+                        <span>40°C</span>
+                        <span id="temp-label">70°C (Critical)</span>
+                        <span>100°C</span>
+                    </div>
+                    <input id="temp-slider"
+                        class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary"
+                        max="100" min="40" type="range" value="40" />
+                    <p id="temp-desc" class="font-body-md text-body-md text-center text-on-surface-variant italic">
+                        Suhu rendah. Granula pati masih utuh, keras, dan tidak larut dalam air.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Quick Quiz -->
+        <section data-animate="up" class="space-y-stack-sm pb-12">
+            <h2 class="font-headline-md text-headline-md text-primary">Knowledge Check</h2>
+            <div class="glass-card p-6 rounded-xl space-y-4">
+                <p class="font-headline-sm text-headline-sm text-primary">Why does sago starch thicken during heating?
+                </p>
+                <div class="space-y-3" id="quiz-options">
+                    <button onclick="checkAnswer(this, false)"
+                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
+                        <span
+                            class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">A</span>
+                        <span class="font-body-md text-body-md">Water evaporation</span>
+                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
+                    </button>
+                    <button onclick="checkAnswer(this, true)"
+                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
+                        <span
+                            class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">B</span>
+                        <span class="font-body-md text-body-md">Starch granules swelling and bursting</span>
+                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
+                    </button>
+                    <button onclick="checkAnswer(this, false)"
+                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
+                        <span
+                            class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">C</span>
+                        <span class="font-body-md text-body-md">Cooling of the liquid</span>
+                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
+                    </button>
+                </div>
+                <div id="quiz-feedback" class="mt-4 p-3 rounded-lg hidden transition-opacity">
+                    <p id="quiz-feedback-text" class="font-label-sm text-label-sm leading-relaxed">
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Slider Logic
+            const tempSlider = document.getElementById('temp-slider');
+            const tempVal = document.getElementById('temp-val');
+            const granule = document.getElementById('starch-granule');
+            const tempDesc = document.getElementById('temp-desc');
+            const tempLabel = document.getElementById('temp-label');
+
+            if(tempSlider) {
+                tempSlider.addEventListener('input', (e) => {
+                    const val = parseInt(e.target.value);
+                    tempVal.innerText = val;
+                    
+                    let scale = 1;
+                    let opacity = 1;
+                    
+                    if (val < 60) {
+                        tempDesc.innerText = "Low temperature. Starch granules remain intact, crystalline, and insoluble in water.";
+                        if(tempLabel) tempLabel.innerText = val + "°C (Solid)";
+                        scale = 1 + ((val - 40) / 20) * 0.2; 
+                        granule.classList.remove('animate-pulse');
+                        granule.classList.add('rounded-full');
+                        granule.classList.remove('rounded-[40%]');
+                    } else if (val >= 60 && val < 70) {
+                        tempDesc.innerText = "Initial heating. Water penetrates the starch granules, causing them to swell rapidly.";
+                        if(tempLabel) tempLabel.innerText = val + "°C (Critical)";
+                        scale = 1.2 + ((val - 60) / 10) * 0.8;
+                        granule.classList.add('animate-pulse');
+                        granule.classList.add('rounded-full');
+                        granule.classList.remove('rounded-[40%]');
+                    } else {
+                        tempDesc.innerText = "Gelatinization Point! Granules rupture, releasing amylose and amylopectin to form a viscous gel (Ambuyat).";
+                        if(tempLabel) tempLabel.innerText = val + "°C (Gelatinized)";
+                        scale = 2.0 + ((val - 70) / 30) * 1.5;
+                        opacity = 0.5 + ((100 - val) / 30) * 0.5;
+                        granule.classList.remove('animate-pulse');
+                        granule.classList.remove('rounded-full');
+                        granule.classList.add('rounded-[40%]'); 
+                    }
+                    
+                    granule.style.transform = `scale(${scale})`;
+                    granule.style.opacity = opacity;
+                });
+
+                tempSlider.dispatchEvent(new Event('input'));
+            }
+
+            // Quiz Logic
+            function checkAnswer(btn, isCorrect) {
+                const allBtns = document.querySelectorAll('.quiz-btn');
+                allBtns.forEach(b => {
+                    b.className = "quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant transition-colors flex items-center group opacity-50";
+                    const icon = b.querySelector('.quiz-icon');
+                    if(icon) icon.className = "quiz-icon material-symbols-outlined ml-auto hidden";
+                    const letter = b.querySelector('.quiz-letter');
+                    if(letter) letter.className = "quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm";
+                });
+
+                btn.classList.remove('opacity-50', 'border-outline-variant');
+                const icon = btn.querySelector('.quiz-icon');
+                const letter = btn.querySelector('.quiz-letter');
+                const feedbackBox = document.getElementById('quiz-feedback');
+                const feedbackText = document.getElementById('quiz-feedback-text');
+                
+                icon.classList.remove('hidden');
+
+                if (isCorrect) {
+                    btn.classList.add('border-2', 'border-secondary', 'bg-secondary/5');
+                    letter.classList.add('bg-secondary', 'text-white', 'border-secondary');
+                    letter.classList.remove('border-primary');
+                    icon.classList.add('text-secondary', 'icon-filled');
+                    icon.innerText = "check_circle";
+                    
+                    feedbackBox.className = "mt-4 p-3 rounded-lg transition-opacity bg-secondary/10";
+                    feedbackText.className = "font-label-sm text-label-sm leading-relaxed text-on-secondary-container";
+                    feedbackText.innerHTML = "<strong>Correct!</strong> Gelatinization occurs when heat causes granules to swell with water until they rupture, creating a viscous gel network (Ambuyat).";
+                } else {
+                    btn.classList.add('border-2', 'border-[#ba1a1a]', 'bg-[#ba1a1a]/5');
+                    letter.classList.add('bg-[#ba1a1a]', 'text-white', 'border-[#ba1a1a]');
+                    letter.classList.remove('border-primary');
+                    icon.classList.add('text-[#ba1a1a]');
+                    icon.innerText = "cancel";
+
+                    feedbackBox.className = "mt-4 p-3 rounded-lg transition-opacity bg-[#ba1a1a]/10";
+                    feedbackText.className = "font-label-sm text-label-sm leading-relaxed text-[#ba1a1a]";
+                    feedbackText.innerHTML = "<strong>Incorrect.</strong> Try to recall what happens to the physical structure of starch granules when heated in water.";
+                }
+            }
+        </script>
+        </section>
+    </main>
+    <custom-footer></custom-footer>
+    <!-- BottomNavBar -->
+    <bottom-navbar active-page="lessons"></bottom-navbar>
+    <script src="navbar.js"></script>
+    <script src="animations.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>

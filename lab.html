@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AmvaChem Virtual Lab</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <style>
+        .linangkit-overlay {
+            background-image: radial-gradient(circle at 2px 2px, rgba(68, 42, 34, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen pb-20">
+    <!-- TopAppBar -->
+    <header
+        class="sticky top-0 w-full z-50 bg-white/70 dark:bg-surface-variant/70 backdrop-blur-xl border-b border-white/20 shadow-sm">
+        <div class="flex justify-between items-center px-4 md:px-margin-desktop max-w-container-max mx-auto h-20">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl">science</span>
+                <h1 class="font-headline-md text-headline-sm md:text-headline-md font-bold text-primary">AmvaChem</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-primary text-2xl">account_circle</span>
+            </div>
+        </div>
+    </header>
+    <main class="linangkit-overlay min-h-screen px-margin-mobile py-stack-md flex flex-col gap-stack-md">
+        <!-- Lab Header / Breadcrumbs -->
+        <div class="flex items-center gap-2">
+            <div
+                class="bg-secondary-container/15 text-on-secondary-container px-3 py-1 rounded-full flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">home</span>
+                <span class="font-label-sm text-label-sm">Lessons</span>
+            </div>
+            <span class="material-symbols-outlined text-outline">chevron_right</span>
+            <span class="font-label-sm text-label-sm text-outline font-medium">Virtual Lab: Sago Chemistry</span>
+        </div>
+        <!-- Simulation Area: Mixing Sago & Water -->
+        <section data-animate="up" class="glass-card rounded-xl overflow-hidden flex flex-col">
+            <div
+                class="p-4 bg-primary-container text-on-primary border-b border-white/10 flex justify-between items-center">
+                <div>
+                    <h2 class="font-headline-sm text-headline-sm text-white">Mixing Sago &amp; Water</h2>
+                    <p class="font-label-sm text-label-sm opacity-80 text-white/70">Simulation 01: Gelatinization
+                        Process</p>
+                </div>
+                <div
+                    class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                    <span class="material-symbols-outlined text-sm icon-filled"
+                        >bolt</span>
+                    <span class="font-label-sm text-label-sm">Active Lab</span>
+                </div>
+            </div>
+            <div class="relative h-64 bg-surface-container-highest overflow-hidden">
+                <img class="w-full h-full object-cover opacity-90"
+                    data-alt="A clean laboratory setting with a glass beaker on a heating plate containing a translucent white mixture of sago starch and water. The lighting is bright and technical, with a soft blur on the background laboratory equipment. The overall aesthetic is professional, modern, and clinical with warm sago-beige tones reflecting the brand's identity."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuACHrY3rV0AMS-EJZzV3kVjl6EP_hIcw07Zv9ATnY47ulvbO2N32E3q8yh_uXNNTbAQiWb9_uv02WT0LkM56P39d0UeKMyEOLXTvoyG3UyEHs9WFD4qgya8M38_sNrJ0_NSnoyZeFAwv3VyqZVnU8SDwQH85DeYs5tCrTOsatnp20D-zUiV3qSPkfe_V8dP50A6IqlkQ_5J1LVnRGlNRC6_eZG6m3t2EaG_TjLtsCCRk94wYuXFSSumV_tVtBWIkRYUoriPb3YxwnMI" />
+                <!-- Macro & Micro View Overlay (Simulation Data) -->
+                <div class="absolute inset-0 flex items-center justify-around pointer-events-none p-4">
+                    <!-- Micro View Lens -->
+                    <div
+                        class="w-32 h-32 rounded-full border-4 border-white/40 shadow-xl overflow-hidden glass-card flex flex-col items-center justify-center pointer-events-auto">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A microscopic molecular view of starch granules in water. The granules are seen as spherical crystalline structures beginning to swell and lose their birefringence. The lighting is cool-toned with cyan and white highlights to represent water molecules interacting with the starch. This technical visualization uses 2px thick diagrammatic lines to show swelling paths."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSuPTJnBqEvrm0-kFdbl-hq-w0e7RELKX9Wao9mOCK-IB5F-JEddZbSPcklWOpG-dwSB-4vTlGQOwdJZnvbu715lMa_el1W76dWAD7AEohEby1bY8KwG5Yvzz6s1gWQt5VREkrQfdrXlAm6Hvy33rR-fFZu1BNepqv6fMyzn1FifqIjTdNLJ0oHpdb_z-oYer3xJY_9uIhv7TGteTvn_M_BQoL5dJVx1VFD3iafI9h9wZpkT8MAalh9LlU29fc8aRh7ZWGNkzsV_5r" />
+                        <div
+                            class="absolute bottom-0 w-full bg-black/60 text-white text-[10px] text-center font-label-sm py-1">
+                            Molecular View</div>
+                    </div>
+                    <!-- Macro View Lens -->
+                    <div
+                        class="w-32 h-32 rounded-full border-4 border-white/40 shadow-xl overflow-hidden glass-card flex flex-col items-center justify-center pointer-events-auto">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A macro close-up view of a thickening sago porridge. The texture is viscous, glossy, and translucent beige, showing small air bubbles trapped within the starch matrix. The lighting is warm and natural, suggesting a kitchen-laboratory environment. The image emphasizes the physical change from thin liquid to thick gel."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3T5zEIMybbhiZ8ZRNL9o6wS-AqfmhwCl0YZO16RpfVl27YUHjYwAq5r17B6P61a_PjK5LxhEAtjfZWsSoAm5CgWH08uvDyNMtACi7xkEI8EAZdyNRSubfXKi-ewinGExa80oNFzBkRUHvqfFvwlKNJ7Zawc-TdrtSSCsvOLkidcpMxWzP2oJ9v7SO6nvhMWaE1nCqjj0eafxEWrxKiaDg98CIEvEpWSw-r5UyZ8A2jIMhdpcH4WNARNKQrXtsbeafC_q4RtY2kajS" />
+                        <div
+                            class="absolute bottom-0 w-full bg-black/60 text-white text-[10px] text-center font-label-sm py-1">
+                            Macro View</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls Panel -->
+            <div class="p-6 flex flex-col gap-6">
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between items-center">
+                        <label class="font-label-md text-label-md text-primary flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">thermostat</span>
+                            Water Temperature
+                        </label>
+                        <span id="temp-display" class="font-label-md text-label-md text-secondary">65°C</span>
+                    </div>
+                    <input id="temp-slider"
+                        class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-secondary"
+                        max="100" min="20" type="range" value="65" />
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between items-center">
+                        <label class="font-label-md text-label-md text-primary flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">cyclone</span>
+                            Stirring Speed
+                        </label>
+                        <span id="speed-display" class="font-label-md text-label-md text-secondary">350 RPM</span>
+                    </div>
+                    <input id="speed-slider"
+                        class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-secondary"
+                        max="1000" min="0" type="range" value="350" />
+                </div>
+                <div class="flex gap-4">
+                    <button id="reset-btn"
+                        class="flex-1 bg-primary text-white font-headline-sm text-sm py-4 rounded-xl shadow-md active:scale-95 duration-200">
+                        Reset Sample
+                    </button>
+                    <button id="apply-btn"
+                        class="flex-1 bg-secondary text-white font-headline-sm text-sm py-4 rounded-xl shadow-md active:scale-95 duration-200 bg-gradient-to-r from-secondary to-tertiary-fixed-dim">
+                        Apply Heat
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Chemistry Insights: Hydrogen Bonding Diagram -->
+        <section data-animate="up" class="glass-card rounded-xl p-6 flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
+                    <span class="material-symbols-outlined">hub</span>
+                </div>
+                <div>
+                    <h3 class="font-headline-sm text-label-md uppercase tracking-wider text-primary">Molecular Mechanics
+                    </h3>
+                    <p class="text-xs text-on-surface-variant">Real-time Hydrogen Bonding Analysis</p>
+                </div>
+            </div>
+            <div
+                class="bg-surface-container-low rounded-lg p-4 border border-outline-variant/30 flex items-center justify-center h-40">
+                <!-- SVG Chemistry Diagram Simulation -->
+                <svg class="w-full h-full opacity-70" viewbox="0 0 200 100">
+                    <circle cx="50" cy="50" fill="#442a22" r="10"></circle>
+                    <circle cx="150" cy="50" fill="#442a22" r="10"></circle>
+                    <line stroke="#00639a" stroke-dasharray="4" stroke-width="2" x1="60" x2="140" y1="50" y2="50">
+                    </line>
+                    <text class="text-[8px] font-label-sm fill-primary" x="42" y="30">Amylose</text>
+                    <text class="text-[8px] font-label-sm fill-primary" x="142" y="30">H2O</text>
+                    <text class="text-[6px] font-label-sm fill-secondary" x="80" y="45">Hydrogen Bond Forming</text>
+                </svg>
+            </div>
+            <p class="font-body-md text-label-sm text-on-surface-variant italic">
+                "As temperature rises to 60-70°C, hydrogen bonds between amylose chains weaken, allowing water molecules
+                to penetrate the granule."
+            </p>
+        </section>
+        <!-- Lab Instructions -->
+        <section data-animate="up" class="flex flex-col gap-stack-sm">
+            <h3 class="font-headline-sm text-headline-sm text-primary px-1">Lab Instructions</h3>
+            <div class="flex flex-col gap-3">
+                <div class="glass-card p-4 rounded-xl flex gap-4 border-l-4 border-l-tertiary">
+                    <span
+                        class="font-label-md text-label-md bg-tertiary/10 text-tertiary w-6 h-6 rounded-full flex items-center justify-center shrink-0">1</span>
+                    <p class="font-body-md text-body-md text-on-surface">Slide Temperature to <span
+                            class="font-bold text-secondary">65°C</span> to begin the hydration phase.</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl flex gap-4 border-l-4 border-l-outline-variant">
+                    <span
+                        class="font-label-md text-label-md bg-outline-variant/10 text-outline w-6 h-6 rounded-full flex items-center justify-center shrink-0">2</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Observe the <span
+                            class="font-bold">Molecular View</span> for granule expansion.</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl flex gap-4 border-l-4 border-l-outline-variant">
+                    <span
+                        class="font-label-md text-label-md bg-outline-variant/10 text-outline w-6 h-6 rounded-full flex items-center justify-center shrink-0">3</span>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Stir at <span class="font-bold">400
+                            RPM</span> to prevent sediment clumping.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Achievements & Badges -->
+        <section data-animate="up" class="glass-card rounded-xl p-6 mb-12">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-headline-sm text-headline-sm text-primary">Lab Milestones</h3>
+                <span class="text-xs font-label-sm text-secondary bg-secondary-container/20 px-2 py-1 rounded">1/5
+                    Unlocked</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex flex-col items-center gap-2 grayscale">
+                    <div
+                        class="w-16 h-16 rounded-full bg-surface-container-high border-2 border-dashed border-outline-variant flex items-center justify-center">
+                        <span
+                            class="material-symbols-outlined text-outline-variant text-3xl">local_fire_department</span>
+                    </div>
+                    <span class="font-label-sm text-[10px] text-outline text-center">Thermal Master</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-tertiary-fixed to-on-tertiary-container shadow-lg flex items-center justify-center border-2 border-white">
+                        <span class="material-symbols-outlined text-white text-3xl icon-filled"
+                            >workspace_premium</span>
+                    </div>
+                    <span class="font-label-sm text-[10px] text-primary font-bold text-center">Master of
+                        Gelatinization</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 grayscale">
+                    <div
+                        class="w-16 h-16 rounded-full bg-surface-container-high border-2 border-dashed border-outline-variant flex items-center justify-center">
+                        <span class="material-symbols-outlined text-outline-variant text-3xl">texture</span>
+                    </div>
+                    <span class="font-label-sm text-[10px] text-outline text-center">Texture Guru</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <custom-footer></custom-footer>
+    <!-- BottomNavBar -->
+    <bottom-navbar active-page="lab"></bottom-navbar>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tempSlider = document.getElementById('temp-slider');
+            const tempDisplay = document.getElementById('temp-display');
+            const speedSlider = document.getElementById('speed-slider');
+            const speedDisplay = document.getElementById('speed-display');
+            const resetBtn = document.getElementById('reset-btn');
+
+            // Default values
+            const defaultTemp = 65;
+            const defaultSpeed = 350;
+
+            // Update temperature display
+            tempSlider.addEventListener('input', (e) => {
+                tempDisplay.textContent = \`\${e.target.value}°C\`;
+            });
+
+            // Update speed display
+            speedSlider.addEventListener('input', (e) => {
+                speedDisplay.textContent = \`\${e.target.value} RPM\`;
+            });
+
+            // Reset sample button
+            resetBtn.addEventListener('click', () => {
+                tempSlider.value = defaultTemp;
+                tempDisplay.textContent = \`\${defaultTemp}°C\`;
+                
+                speedSlider.value = defaultSpeed;
+                speedDisplay.textContent = \`\${defaultSpeed} RPM\`;
+            });
+        });
+    </script>
+
+    <script src="navbar.js"></script>
+    <script src="animations.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

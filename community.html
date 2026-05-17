@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AmvaChem: Community &amp; Living Heritage</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <style>
+        .linangkit-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(119, 87, 77, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .sago-gradient {
+            background: linear-gradient(135deg, #00639a 0%, #8ec64c 100%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background min-h-screen linangkit-pattern">
+    <!-- TopAppBar -->
+    <header class="bg-white/70 backdrop-blur-xl sticky top-0 w-full z-50 shadow-sm border-b border-white/20">
+        <div class="flex justify-between items-center px-4 md:px-margin-desktop max-w-container-max mx-auto h-20">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl" data-icon="science">science</span>
+                <h1 class="font-headline-md text-headline-md font-bold text-primary">AmvaChem</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <span
+                    class="material-symbols-outlined text-primary text-2xl p-2 rounded-full hover:bg-surface-container-high/50 transition-colors active:scale-95 duration-200"
+                    data-icon="account_circle">account_circle</span>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-container-max mx-auto px-margin-mobile py-stack-md pb-32">
+        <!-- Hero Section -->
+        <section data-animate="up" class="mb-stack-lg">
+            <h2 class="font-display-lg-mobile text-display-lg-mobile text-primary mb-stack-sm">Our Living Heritage</h2>
+            <div class="h-1 w-24 sago-gradient rounded-full mb-stack-md"></div>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                Discover the molecular soul of Sabah's culinary traditions, where ancient techniques meet the precision
+                of modern chemistry.
+            </p>
+        </section>
+        <!-- Interactive Map Section -->
+        <section data-animate="up" class="mb-stack-lg">
+            <div class="glass-card rounded-xl overflow-hidden shadow-sm">
+                <div class="p-4 border-b border-outline-variant/20 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary" data-icon="map">map</span>
+                    <span class="font-label-md text-label-md uppercase text-secondary">Community Roots</span>
+                </div>
+                <div class="relative aspect-square w-full bg-surface-container-highest">
+                    <img class="w-full h-full object-cover opacity-80"
+                        data-alt="A stylized, high-contrast map of Sabah, Malaysia, focusing on the coastal regions where indigenous communities thrive. The visual style is modern and clean, using a palette of Sago Beige and Earth Brown with soft blue glowing nodes indicating cultural hotspots. The lighting is bright and technical, suggesting an educational digital interface."
+                        data-location="Sabah, Malaysia"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeR7DIro5Mcbwu8cYZhKg6_rjHXdfl37R8m_U7hU2oBnXB37CMUXPOYF383cT1XIliicYOZTCeUb020gUGgFcyFaurR8eU6xOtVbJofbzjXWrBeu-k2y-MHL4fNA8eQbgfkU9T9BDW7fcl_bGczdnHrJpEdak8HaSKLoLE0dqkm_Y7zzUyGkzQstOk6eyGb7Z37nD5UoWmXt7_8jes1dCDjGnriO64H-gIGpsVDnZb6o89ztd-4KMKtngki4Fg7amdhmn3vFOgJYDP" />
+                    <!-- Pulsing Points -->
+                    <div
+                        class="absolute top-1/2 left-1/3 w-6 h-6 bg-secondary/30 rounded-full flex items-center justify-center animate-pulse">
+                        <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                    </div>
+                    <div
+                        class="absolute top-1/4 right-1/4 w-6 h-6 bg-tertiary/30 rounded-full flex items-center justify-center animate-pulse">
+                        <div class="w-2 h-2 bg-tertiary rounded-full"></div>
+                    </div>
+                    <!-- Overlay Legend -->
+                    <div class="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-lg flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-secondary"></span>
+                            <span class="font-label-sm text-label-sm">Kadazan-Dusun (Hinava)</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-tertiary"></span>
+                            <span class="font-label-sm text-label-sm">Bisaya &amp; Tatana (Ambuyat)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- UNESCO Section -->
+        <section data-animate="up" class="mb-stack-lg glass-card rounded-xl p-stack-md border-l-4 border-secondary">
+            <div class="flex items-center gap-3 mb-stack-sm">
+                <span class="material-symbols-outlined text-secondary" data-icon="policy">policy</span>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Preserving the Intangible</h3>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Food is more than sustenance; it is a repository of indigenous scientific knowledge. We work with local
+                communities to document the chemical reactions involved in traditional fermentation and starch
+                extraction, ensuring these "living libraries" are recognized as vital cultural assets.
+            </p>
+        </section>
+        <!-- Gallery Section -->
+        <section data-animate="up" class="mb-stack-lg">
+            <div class="flex items-center justify-between mb-stack-sm">
+                <h3 class="font-headline-sm text-headline-sm text-primary">Traditional Methods</h3>
+                <span class="font-label-sm text-label-sm text-secondary">View All</span>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="glass-card rounded-xl overflow-hidden aspect-[4/5] relative">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A close-up shot of a pair of wooden Chandas spinning thick, translucent Ambuyat starch in a traditional bowl. The lighting is warm and natural, highlighting the viscous texture of the sago. The aesthetic is documentary-style but polished, with Earth Brown tones and soft focus on the background."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn8a8mgSzEzuKit6xO3E4LwknQMFdIm0WBAgBppyHDRqQOfRYTWLyOrItM1qoCZ6cOmNfxl8Hlzswmefl1Q3IPBsbR99HfCdDexf9aS4h_rnvCLH_gHsqbRYYj3GEf_2tZGePzsFz3ufp3D0GOsi8f0is9tcfq1x4VipVJLeE5xL2Gaol24qXNoxS0XuDY7hMGmTEl4eXz1LFfuAn-fMuWeuBTpbYPaBfb8yurkgmmxG1--6rdyJrbn-ZTCWG6LDEj97d3SCbUQkrW" />
+                    <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+                        <p class="text-white font-label-sm text-label-sm">The Chandas Technique</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-xl overflow-hidden aspect-[4/5] relative">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A bright, high-key image of fresh fish being marinated with lime and wild ginger for Hinava. The scene is clean and vibrant, emphasizing the fresh greens and whites of the ingredients. The lighting is bright coastal daylight, creating a fresh and clinical yet organic aesthetic."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBz3yfhZFCNO0ITK5BqAlFgraFDcu93B_LgsZb2RiVp4BSD8EMjSL-JNWAiQbgZBhHcQU9WXl6YpE_fXRwxjnETESAbmqOWnvVuJju-uDanEZflZa0NfeMpIiW_mS49jASLLMoTnNZiv2vTkr-yW3sbjz5va1EjsrP0E3dhJHbj1rTi8R920zFq2gQNLNg9WOLz2s_VkvcRIvvhLtuLoZD_V3oGx3LiUgsHkMjeKaYLIlfZuET4STm3rQlEBRst-EM9eRsVMTwPGiZ" />
+                    <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+                        <p class="text-white font-label-sm text-label-sm">Acid Denaturation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Community Stories -->
+        <section data-animate="up" class="mb-stack-lg">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-stack-md text-center">Community Stories</h3>
+            <div class="relative p-6 glass-card rounded-2xl">
+                <span class="material-symbols-outlined text-4xl text-primary-fixed-dim absolute -top-4 left-6 icon-filled"
+                    data-icon="format_quote" >format_quote</span>
+                <p class="font-body-lg text-body-lg italic text-on-surface mb-stack-sm text-center">
+                    "The sago does not just feed our bellies; it holds the memory of the river. When we twirl the
+                    Ambuyat, we are twirling the history of our ancestors."
+                </p>
+                <div class="text-center">
+                    <p class="font-label-md text-label-md text-primary font-bold">Odu Maryam</p>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant">Community Elder, Beaufort</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <custom-footer></custom-footer>
+    <!-- BottomNavBar -->
+    <bottom-navbar active-page="gallery"></bottom-navbar>
+    <script src="navbar.js"></script>
+    <script src="animations.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>

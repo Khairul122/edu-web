@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"D:\\\\ProjekFullStack\\\\edu-web\" -Recurse -Force)",
+      "Bash(Select-Object -Property FullName)",
+      "Bash(ConvertTo-Csv -NoTypeInformation)",
+      "Bash(Measure-Object -Line)",
+      "Bash(awk '/^<script>|^<\\\\/script>/,//' \"D:\\\\ProjekFullStack\\\\edu-web\\\\code.html\")"
+    ]
+  }
+}

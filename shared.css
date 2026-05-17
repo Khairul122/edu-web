@@ -1,0 +1,32 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ganti inline style="font-variation-settings: 'FILL' 1;" */
+.icon-filled {
+    font-variation-settings: 'FILL' 1;
+}
+
+body {
+    min-height: max(884px, 100dvh);
+}
+
+/* Scroll-triggered slide animations */
+[data-animate] {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-animate="up"]    { transform: translateY(40px); }
+[data-animate="left"]  { transform: translateX(60px); }
+[data-animate="right"] { transform: translateX(-60px); }
+[data-animate].is-visible { opacity: 1; transform: none; }
+[data-delay="1"].is-visible { transition-delay: 0.1s; }
+[data-delay="2"].is-visible { transition-delay: 0.2s; }
+[data-delay="3"].is-visible { transition-delay: 0.3s; }
+[data-delay="4"].is-visible { transition-delay: 0.4s; }
