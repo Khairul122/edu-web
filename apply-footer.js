@@ -50,17 +50,17 @@ const files = ['index.html', 'module-ambuyat.html', 'lab.html', 'community.html'
 
 files.forEach(file => {
     let content = fs.readFileSync(file, 'utf8');
-    
+
     // Add custom-footer before bottom-navbar if not present
     if (!content.includes('<custom-footer>')) {
         content = content.replace(/<!-- BottomNavBar[\s\S]*?<bottom-navbar/, '<custom-footer></custom-footer>\n    <!-- BottomNavBar -->\n    <bottom-navbar');
     }
-    
+
     // Add footer.js before </body> if not present
     if (!content.includes('footer.js')) {
         content = content.replace('</body>', '    <script src="footer.js"></script>\n</body>');
     }
-    
+
     fs.writeFileSync(file, content);
 });
 
