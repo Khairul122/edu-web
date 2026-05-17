@@ -10,7 +10,7 @@ class CustomHeader extends HTMLElement {
             { id: 'home', href: '/', label: 'Home' },
             { id: 'lessons', href: '/module-ambuyat', label: 'Lessons' },
             { id: 'lab', href: '/lab', label: 'Lab' },
-            { id: 'gallery', href: '/community', label: 'Gallery' }
+            // { id: 'gallery', href: '/community', label: 'Gallery' }
         ];
 
         let navHtml = '';
