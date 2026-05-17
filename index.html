@@ -31,34 +31,7 @@
 
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-container/30">
     <!-- TopAppBar -->
-    <header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
-        <div class="flex items-center justify-between px-4 md:px-12 max-w-container-max mx-auto h-16 md:h-[72px]">
-            <a href="/" class="flex items-center gap-2 shrink-0">
-                <img alt="AmvaChem Logo" class="h-10 w-10 object-contain" src="logo.png">
-                <span class="font-bold text-[1.25rem] text-on-surface tracking-tight">AmvaChem</span>
-            </a>
-            <div class="hidden md:flex items-center gap-7">
-                <nav class="flex items-center gap-7">
-                    <a href="/" class="font-bold text-secondary text-sm">Home</a>
-                    <a href="/module-ambuyat"
-                        class="text-on-surface-variant hover:text-on-surface transition-colors text-sm">Lessons</a>
-                    <a href="/lab"
-                        class="text-on-surface-variant hover:text-on-surface transition-colors text-sm">Lab</a>
-                    <a href="/community"
-                        class="text-on-surface-variant hover:text-on-surface transition-colors text-sm">Gallery</a>
-                </nav>
-                <div
-                    class="flex items-center gap-2 border border-outline rounded-full px-3 py-1.5 hover:bg-surface-container-low/40 transition-colors">
-                    <span class="material-symbols-outlined text-on-surface-variant" style="font-size:18px">search</span>
-                    <input type="text" placeholder="Search molecules..."
-                        class="border-none focus:ring-0 outline-none bg-transparent text-sm text-on-surface-variant placeholder:text-on-surface-variant w-36">
-                </div>
-                <span
-                    class="material-symbols-outlined text-on-surface-variant text-[1.6rem] cursor-pointer hover:text-on-surface transition-colors">account_circle</span>
-            </div>
-            <button class="md:hidden material-symbols-outlined text-primary">menu</button>
-        </div>
-    </header>
+    <custom-header active-page="home"></custom-header>
     <main class="relative pattern-overlay">
         <!-- Hero Section -->
         <section
@@ -304,6 +277,7 @@
         class="fixed bottom-24 right-6 md:bottom-12 md:right-12 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center z-40 active:scale-95 transition-all">
         <span class="material-symbols-outlined text-3xl">add_task</span>
     </button>
+    <script src="header.js"></script>
     <script src="navbar.js"></script>
     <script src="animations.js"></script>
     <script src="footer.js"></script>
