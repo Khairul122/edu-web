@@ -233,21 +233,21 @@
 
             // Update temperature display
             tempSlider.addEventListener('input', (e) => {
-                tempDisplay.textContent = \`\${e.target.value}°C\`;
+                tempDisplay.textContent = `${e.target.value}°C`;
             });
 
             // Update speed display
             speedSlider.addEventListener('input', (e) => {
-                speedDisplay.textContent = \`\${e.target.value} RPM\`;
+                speedDisplay.textContent = `${e.target.value} RPM`;
             });
 
             // Reset sample button
             resetBtn.addEventListener('click', () => {
                 tempSlider.value = defaultTemp;
-                tempDisplay.textContent = \`\${defaultTemp}°C\`;
+                tempDisplay.textContent = `${defaultTemp}°C`;
                 
                 speedSlider.value = defaultSpeed;
-                speedDisplay.textContent = \`\${defaultSpeed} RPM\`;
+                speedDisplay.textContent = `${defaultSpeed} RPM`;
             });
         });
     </script>
