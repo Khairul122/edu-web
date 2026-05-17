@@ -28,8 +28,6 @@ class CustomFooter extends HTMLElement {
                     <button class="material-symbols-outlined text-primary hover:text-secondary">share</button>
                     <button class="material-symbols-outlined text-primary hover:text-secondary">mail</button>
                 </div>
-                <p class="text-on-surface-variant text-sm mt-auto">© 2024 AmvaChem - Sabah Culinary Chemistry Initiative
-                </p>
             </div>
         </div>
     </footer>
