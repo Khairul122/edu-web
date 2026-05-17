@@ -10,7 +10,7 @@ class BottomNavbar extends HTMLElement {
             { id: 'home', href: '/', icon: 'home', label: 'Home' },
             { id: 'lessons', href: '/module-ambuyat', icon: 'menu_book', label: 'Lessons' },
             { id: 'lab', href: '/lab', icon: 'biotech', label: 'Lab' },
-            { id: 'gallery', href: '/community', icon: 'museum', label: 'Gallery' }
+            // { id: 'gallery', href: '/community', icon: 'museum', label: 'Gallery' }
         ];
 
         let html = `
