@@ -7,7 +7,20 @@
       "Bash(Measure-Object -Line)",
       "Bash(awk '/^<script>|^<\\\\/script>/,//' \"D:\\\\ProjekFullStack\\\\edu-web\\\\code.html\")",
       "Bash(git *)",
-      "Skill(run)"
+      "Skill(run)",
+      "Bash(npx --yes chromium-cli --help)",
+      "Read(//d//**)",
+      "Read(//c/Users/USER/.claude/**)",
+      "Bash(where chromium-cli *)",
+      "Bash(npm ls *)",
+      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Bash(node --check header.js)",
+      "Bash(node --check bottom-navbar.js)",
+      "Bash(node --check data/shared.js)",
+      "Bash(node --check data/quiz.js)",
+      "Bash(node --check data/modules.js)",
+      "Bash(node *)",
+      "Bash(pkill -f \"http.server 8123\")"
     ]
   }
 }

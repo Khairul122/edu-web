@@ -5,7 +5,7 @@ class CustomHeader extends HTMLElement {
 
     connectedCallback() {
         const activePage = this.getAttribute('active-page') || 'home';
-        
+
         const navItems = [
             { id: 'home', href: 'index.html', label: 'Home' },
             { id: 'lessons', href: 'lessons.html', label: 'Lessons' },
@@ -39,7 +39,7 @@ class CustomHeader extends HTMLElement {
 
         this.innerHTML = `
     <header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
-        <div class="flex items-center justify-between px-2 md:px-4 max-w-container-max mx-auto h-16 md:h-[72px]">
+        <div class="flex items-center justify-between px-4 md:px-8 w-full h-16 md:h-[72px]">
             <a href="index.html" class="flex items-center gap-2 shrink-0">
                 <img alt="AmvaChem Logo" class="h-10 w-10 object-contain" src="logo.png">
                 <span class="font-bold text-[1.25rem] text-on-surface tracking-tight">AmvaChem</span>
