@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AmvaChem — Lessons</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <style>
+        .pattern-overlay {
+            background-image: radial-gradient(circle at 2px 2px, rgba(93, 64, 55, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container/30">
+    <custom-header active-page="lessons"></custom-header>
+    <main class="pattern-overlay min-h-screen">
+        <section class="py-stack-lg px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-container-max mx-auto">
+
+                <div data-animate="up" class="flex justify-between items-end mb-stack-md">
+                    <div>
+                        <h2 class="font-headline-md text-headline-md text-primary">Active Modules</h2>
+                        <p class="text-on-surface-variant">Continue your chemical journey</p>
+                    </div>
+                    <div class="flex items-center gap-1 bg-white px-3 py-1 rounded-full shadow-sm">
+                        <span class="material-symbols-outlined text-tertiary text-sm icon-filled">workspace_premium</span>
+                        <span class="text-xs font-bold text-tertiary">3 Badges</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-gutter" id="module-cards"></div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+    <bottom-navbar active-page="lessons"></bottom-navbar>
+    <script src="header.js"></script>
+    <script src="bottom-navbar.js"></script>
+    <script src="animations.js"></script>
+    <script src="footer.js"></script>
+    <script src="data/modules.js"></script>
+    <script>
+        renderModuleCards('module-cards', MODULES_DATA);
+    </script>
+</body>
+</html>

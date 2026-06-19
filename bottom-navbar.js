@@ -7,10 +7,11 @@ class BottomNavbar extends HTMLElement {
         const activePage = this.getAttribute('active-page') || 'home';
         
         const navItems = [
-            { id: 'home', href: '/', icon: 'home', label: 'Home' },
-            { id: 'lessons', href: '/module-ambuyat', icon: 'menu_book', label: 'Lessons' },
-            { id: 'lab', href: '/lab', icon: 'biotech', label: 'Lab' },
-            // { id: 'gallery', href: '/community', icon: 'museum', label: 'Gallery' }
+            { id: 'home', href: 'index.html', icon: 'home', label: 'Home' },
+            { id: 'lessons', href: 'lessons.html', icon: 'menu_book', label: 'Lessons' },
+            { id: 'lab', href: 'lab.html', icon: 'biotech', label: 'Lab' },
+            { id: 'knowledge-check', href: 'knowledge-check.html', icon: 'quiz', label: 'Quiz' },
+            { id: 'sabah-food-heritage', href: 'sabah-food-heritage.html', icon: 'museum', label: 'Heritage' },
         ];
 
         let html = `
@@ -37,10 +38,10 @@ class BottomNavbar extends HTMLElement {
 
             html += `
                 <a href="${item.href}"
-                    class="relative flex flex-col items-center justify-center rounded-2xl w-16 h-[60px] transition-all duration-300 ease-out active:scale-95 group ${activeClasses}">
+                    class="relative flex flex-col items-center justify-center rounded-2xl flex-1 max-w-[64px] h-[60px] transition-all duration-300 ease-out active:scale-95 group ${activeClasses}">
                     ${activeBackground}
                     ${iconContent}
-                    <span class="font-label-sm text-[10px] mt-0.5 font-medium transition-all duration-300 opacity-80 group-hover:opacity-100 tracking-wide">${item.label}</span>
+                    <span class="font-label-sm text-[9px] mt-0.5 font-medium transition-all duration-300 opacity-80 group-hover:opacity-100 tracking-wide truncate w-full text-center px-0.5">${item.label}</span>
                 </a>
             `;
         });

@@ -6,7 +6,8 @@
       "Bash(ConvertTo-Csv -NoTypeInformation)",
       "Bash(Measure-Object -Line)",
       "Bash(awk '/^<script>|^<\\\\/script>/,//' \"D:\\\\ProjekFullStack\\\\edu-web\\\\code.html\")",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Skill(run)"
     ]
   }
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AmvaChem — Knowledge Check</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <style>
+        .pattern-overlay {
+            background-image: radial-gradient(circle at 2px 2px, rgba(93, 64, 55, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .confetti-piece {
+            position: fixed;
+            top: -10px;
+            z-index: 9999;
+            border-radius: 2px;
+            animation: confetti-fall linear forwards;
+        }
+
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container/30">
+    <custom-header active-page="knowledge-check"></custom-header>
+    <main class="pattern-overlay min-h-screen">
+        <section class="py-stack-lg px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-2xl mx-auto">
+
+                <div data-animate="up" class="mb-stack-md text-center">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-2">Knowledge Check</h2>
+                    <p class="text-on-surface-variant">Test your understanding of Ambuyat &amp; Hinavah chemistry</p>
+                </div>
+
+                <div data-animate="up" data-delay="1" class="glass-card p-6 rounded-xl space-y-4" id="quiz-container"></div>
+
+                <div id="quiz-result" class="hidden glass-card p-8 rounded-xl text-center space-y-4"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+    <bottom-navbar active-page="knowledge-check"></bottom-navbar>
+    <script src="header.js"></script>
+    <script src="bottom-navbar.js"></script>
+    <script src="animations.js"></script>
+    <script src="footer.js"></script>
+    <script src="data/quiz.js"></script>
+    <script>
+        function fireConfetti() {
+            const colors = ['#442a22', '#00639a', '#8ec64c', '#fbfbe2'];
+            for (let i = 0; i < 60; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                const size = 6 + Math.random() * 6;
+                piece.style.width = size + 'px';
+                piece.style.height = size + 'px';
+                piece.style.left = Math.random() * 100 + 'vw';
+                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.animationDuration = (2 + Math.random() * 1.5) + 's';
+                document.body.appendChild(piece);
+                setTimeout(() => piece.remove(), 4000);
+            }
+        }
+
+        function showResult(score, total) {
+            document.getElementById('quiz-container').classList.add('hidden');
+            const resultBox = document.getElementById('quiz-result');
+            resultBox.classList.remove('hidden');
+
+            const perfect = score === total;
+            resultBox.innerHTML = `
+                <span class="material-symbols-outlined text-6xl ${perfect ? 'text-tertiary icon-filled' : 'text-secondary'}">
+                    ${perfect ? 'workspace_premium' : 'emoji_events'}
+                </span>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Your Score: ${score}/${total}</h3>
+                <p class="text-on-surface-variant">
+                    ${perfect ? 'Perfect score! You truly understand the chemistry of Sabah cuisine.' : 'Good effort! Review the lessons and try again to master every concept.'}
+                </p>
+                <button onclick="startQuiz()"
+                    class="bg-primary text-white px-8 py-3 rounded-xl font-bold flex items-center gap-2 mx-auto active:scale-95 transition-all">
+                    Try Again
+                    <span class="material-symbols-outlined text-sm">refresh</span>
+                </button>
+            `;
+
+            if (perfect) fireConfetti();
+        }
+
+        function startQuiz() {
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+            renderQuiz('quiz-container', QUIZ_DATA, showResult);
+        }
+
+        startQuiz();
+    </script>
+</body>
+</html>
