@@ -29,7 +29,9 @@ class CustomHeader extends HTMLElement {
         let navHtml = navItems.map(renderLink).join('');
         let extraNavHtml = extraNavItems.map(renderLink).join('');
 
-        let mobileExtraHtml = extraNavItems.map(item => {
+        const allMobileItems = [...navItems, ...extraNavItems];
+
+        let mobileNavHtml = allMobileItems.map(item => {
             const isActive = activePage === item.id;
             const activeClasses = isActive
                 ? 'font-bold text-secondary'
@@ -65,7 +67,7 @@ class CustomHeader extends HTMLElement {
             </div>
         </div>
         <div id="header-mobile-menu" class="hidden md:hidden bg-white border-t border-outline-variant/20">
-            ${mobileExtraHtml}
+            ${mobileNavHtml}
         </div>
     </header>
         `;
