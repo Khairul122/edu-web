@@ -1,0 +1,10 @@
+# Ignore documentation and agent-specific notes
+PRD.md
+AGENT.md
+claude.md
+
+# Ignore IDE/Editor configurations
+.claude/
+.vscode/
+.idea/
+.DS_Store
