@@ -9,7 +9,7 @@ class CustomHeader extends HTMLElement {
         const navItems = [
             { id: 'home', href: 'index.html', label: 'Home' },
             { id: 'lessons', href: 'lessons.html', label: 'Lessons' },
-            { id: 'lab', href: 'lab.html', label: 'Lab' },
+            // { id: 'lab', href: 'lab.html', label: 'Lab' },
             // { id: 'gallery', href: '/community', label: 'Gallery' }
         ];
 
@@ -48,17 +48,19 @@ class CustomHeader extends HTMLElement {
                 <nav class="flex items-center gap-7">
                     ${navHtml.trim()}
                 </nav>
-                <div class="flex items-center gap-2 border border-outline rounded-full px-3 py-1.5 hover:bg-surface-container-low/40 transition-colors">
-                    <span class="material-symbols-outlined text-on-surface-variant" style="font-size:18px">search</span>
-                    <input type="text" placeholder="Search molecules..."
-                        class="border-none focus:ring-0 outline-none bg-transparent text-sm text-on-surface-variant placeholder:text-on-surface-variant w-36">
-                </div>
                 <nav class="flex items-center gap-7">
                     ${extraNavHtml.trim()}
                 </nav>
             </div>
-            <div class="flex items-center gap-2">
-                <span class="hidden md:inline material-symbols-outlined text-on-surface-variant text-[1.6rem] cursor-pointer hover:text-on-surface transition-colors">account_circle</span>
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 border border-outline rounded-full px-3 py-1.5 hover:bg-surface-container-low/40 transition-colors">
+                    <span class="material-symbols-outlined text-on-surface-variant" style="font-size:18px">search</span>
+                    <input type="text" placeholder="Search molecules..."
+                        class="border-none focus:ring-0 outline-none bg-transparent text-sm text-on-surface-variant placeholder:text-on-surface-variant w-36">
+                </div>
+                <div class="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant cursor-pointer overflow-hidden hover:brightness-95 transition-all">
+                    <span class="material-symbols-outlined icon-filled" style="font-size: 20px">person</span>
+                </div>
                 <button class="md:hidden material-symbols-outlined text-primary" id="header-menu-btn">menu</button>
             </div>
         </div>

@@ -9,7 +9,7 @@ class BottomNavbar extends HTMLElement {
         const navItems = [
             { id: 'home', href: 'index.html', icon: 'home', label: 'Home' },
             { id: 'lessons', href: 'lessons.html', icon: 'menu_book', label: 'Lessons' },
-            { id: 'lab', href: 'lab.html', icon: 'biotech', label: 'Lab' },
+            // { id: 'lab', href: 'lab.html', icon: 'biotech', label: 'Lab' },
             { id: 'knowledge-check', href: 'knowledge-check.html', icon: 'quiz', label: 'Quiz' },
             { id: 'sabah-food-heritage', href: 'sabah-food-heritage.html', icon: 'museum', label: 'Heritage' },
         ];

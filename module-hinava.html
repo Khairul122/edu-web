@@ -28,7 +28,7 @@
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden molecular-bg">
     <!-- Progress Bar (Top) -->
     <div class="fixed top-0 left-0 w-full h-1 z-[60] bg-surface-container">
-        <div class="h-full bg-tertiary-fixed-dim w-[20%] rounded-r-full transition-all duration-500"></div>
+        <div id="top-progress-bar" class="h-full bg-tertiary-fixed-dim rounded-r-full transition-all duration-150" style="width: 0%;"></div>
     </div>
     <!-- Header / TopAppBar -->
     <custom-header active-page="lessons"></custom-header>
@@ -345,6 +345,10 @@
     <custom-footer></custom-footer>
     <!-- BottomNavBar -->
     <bottom-navbar active-page="lessons"></bottom-navbar>
+    <script src="data/shared.js"></script>
+    <script>
+        initScrollTracker('progress-hinava', 'top-progress-bar');
+    </script>
     <script src="header.js"></script>
     <script src="bottom-navbar.js"></script>
     <script src="animations.js"></script>

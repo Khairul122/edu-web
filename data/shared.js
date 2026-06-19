@@ -28,3 +28,30 @@ function initInteractiveSlider(sliderId, config) {
     slider.addEventListener('input', (e) => update(parseInt(e.target.value)));
     update(parseInt(slider.value));
 }
+
+function initScrollTracker(moduleKey, progressBarId) {
+    const progressBar = document.getElementById(progressBarId);
+    if (!progressBar) return;
+
+    function updateProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentage = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
+        
+        // Update top progress bar width
+        progressBar.style.width = `${percentage}%`;
+        
+        // Persist only if higher than previous progress
+        const currentMax = parseInt(localStorage.getItem(moduleKey) || '0');
+        if (percentage > currentMax) {
+            localStorage.setItem(moduleKey, percentage);
+            window.dispatchEvent(new CustomEvent('progress-updated', { detail: { key: moduleKey, value: percentage } }));
+        }
+    }
+
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    
+    // Initialize after a tiny delay to ensure page rendering settles
+    setTimeout(updateProgress, 100);
+}

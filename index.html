@@ -128,7 +128,7 @@
                             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 data-alt="A top-down aesthetic shot of a bowl of clear Ambuyat porridge, showing its smooth texture. Next to it are decorative molecular models of amylose and amylopectin, styled in light mode tones with soft shadows. The overall look is clean, instructional, and culturally rooted in Sabahan traditions."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTgcIEhXgdk_haQiEP8UZMpM0qUXWq4imavs8-3ml-UXvBjhWAVXB28AYCifnYkvKye9hOIaZRTyTW96KgilPnOD_BG-rgOn4nfDvmo3tXlqRMUVrAabOQaevyp5vsGQKU_u5hOK3eO73s0v3n7ojcXkTAUzPRefh6CSw-b2_9JIulUcAavlXBSHhHr84GxIy9Hcj3lDZq3F7SgFKBaG3FLFAM3_Ez1_f8Lc_FsmWfa-eUvb-E6mgo4Wrg249DkJmtd94TBGqBvHmY" />
-                            <div
+                            <div id="badge-ambuyat"
                                 class="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-lg text-xs font-bold">
                                 New</div>
                         </div>
@@ -136,13 +136,13 @@
                             <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Module 1: Ambuyat &amp;
                                 Gelatinization</h3>
                             <div class="w-full bg-outline-variant/30 h-2 rounded-full mb-4">
-                                <div class="bg-secondary h-full rounded-full w-[65%]"></div>
+                                <div id="progress-bar-ambuyat" class="bg-secondary h-full rounded-full w-[65%] transition-all duration-700"></div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="text-xs text-on-surface-variant font-label-md">65% Completed</span>
+                                <span id="progress-text-ambuyat" class="text-xs text-on-surface-variant font-label-md">65% Completed</span>
                                 <button onclick="window.location.href='module-ambuyat.html'"
                                     class="text-secondary font-bold flex items-center gap-1 hover:gap-2 transition-all">
-                                    Resume <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    <span id="action-text-ambuyat">Resume</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                                 </button>
                             </div>
                         </div>
@@ -154,18 +154,21 @@
                             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 data-alt="Close up of fresh fish being marinated in lime juice for Hinava, with visible citrus droplets and sliced chilies. The lighting is bright and airy. Superimposed are abstract chemical structures of protein chains unfolding, using a soft ocean blue and lime green color palette to represent the acidic denaturation process."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNKG-p5-rNi7L42H27SiTPUOx1t5N8RNHeOGsEIkfLwxKdNx4uJ-2N6unEgUeKdrrnzp6DiWfCQ3vwU4YIOYLrDNTe8RE6rmxrtzL9cSkYA9TS-SIPZsMlthh_ASZmlEYC398SWcGlQbh3K4z_XBNAtl9EIWIf22YURfnXOZonSjFnhGQJT21qMhIQCpXJmfMjLsCKCXyi7P49izQvK6jnkCoTjUJ6bk1ykwEISIi7JbfxZo6AlevdfC9jD5zEYE9IqE21unVO5nMn" />
+                            <div id="badge-hinava"
+                                class="absolute top-4 right-4 bg-tertiary-fixed-dim/90 text-white px-3 py-1 rounded-lg text-xs font-bold hidden">
+                                In Progress</div>
                         </div>
                         <div class="p-6">
                             <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Module 2: Hinava &amp;
                                 Protein Denaturation</h3>
                             <div class="w-full bg-outline-variant/30 h-2 rounded-full mb-4">
-                                <div class="bg-tertiary-fixed-dim h-full rounded-full w-[20%]"></div>
+                                <div id="progress-bar-hinava" class="bg-tertiary-fixed-dim h-full rounded-full w-[20%] transition-all duration-700"></div>
                             </div>
                             <div class="flex justify-between items-center">
-                                <span class="text-xs text-on-surface-variant font-label-md">20% Completed</span>
+                                <span id="progress-text-hinava" class="text-xs text-on-surface-variant font-label-md">20% Completed</span>
                                 <button onclick="window.location.href='module-hinava.html'"
                                     class="text-tertiary font-bold flex items-center gap-1 hover:gap-2 transition-all">
-                                    Explore <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    <span id="action-text-hinava">Explore</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                                 </button>
                             </div>
                         </div>
@@ -276,6 +279,73 @@
     <script src="bottom-navbar.js"></script>
     <script src="animations.js"></script>
     <script src="footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modules = [
+                {
+                    id: 'ambuyat',
+                    key: 'progress-ambuyat',
+                    badgeDefault: 'New',
+                    badgeColorDefault: 'bg-primary/90',
+                    actionDefault: 'Resume'
+                },
+                {
+                    id: 'hinava',
+                    key: 'progress-hinava',
+                    badgeDefault: null,
+                    badgeColorDefault: '',
+                    actionDefault: 'Explore'
+                }
+            ];
+
+            modules.forEach(m => {
+                const savedProgress = localStorage.getItem(m.key);
+                const progress = savedProgress !== null ? parseInt(savedProgress) : 0;
+
+                // Update progress bar width
+                const bar = document.getElementById(`progress-bar-${m.id}`);
+                if (bar) bar.style.width = `${progress}%`;
+
+                // Update progress text
+                const text = document.getElementById(`progress-text-${m.id}`);
+                if (text) text.innerText = `${progress}% Completed`;
+
+                // Update badge
+                const badge = document.getElementById(`badge-${m.id}`);
+                if (badge) {
+                    if (progress === 0) {
+                        if (m.badgeDefault) {
+                            badge.innerText = m.badgeDefault;
+                            badge.className = `absolute top-4 right-4 ${m.badgeColorDefault} text-white px-3 py-1 rounded-lg text-xs font-bold`;
+                            badge.classList.remove('hidden');
+                        } else {
+                            badge.classList.add('hidden');
+                        }
+                    } else if (progress > 0 && progress < 100) {
+                        badge.innerText = 'In Progress';
+                        badge.className = 'absolute top-4 right-4 bg-tertiary-fixed-dim/90 text-white px-3 py-1 rounded-lg text-xs font-bold';
+                        badge.classList.remove('hidden');
+                    } else if (progress === 100) {
+                        badge.innerText = 'Completed';
+                        badge.className = 'absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-lg text-xs font-bold';
+                        badge.classList.remove('hidden');
+                    }
+                }
+
+                // Update action text
+                const action = document.getElementById(`action-text-${m.id}`);
+                if (action) {
+                    if (progress === 0) {
+                        action.innerText = m.actionDefault;
+                    } else if (progress > 0 && progress < 100) {
+                        action.innerText = 'Resume';
+                    } else if (progress === 100) {
+                        action.innerText = 'Review';
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

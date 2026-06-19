@@ -28,7 +28,7 @@
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden molecular-bg">
     <!-- Progress Bar (Top) -->
     <div class="fixed top-0 left-0 w-full h-1 z-[60] bg-surface-container">
-        <div class="h-full bg-secondary-container w-[35%] rounded-r-full transition-all duration-500"></div>
+        <div id="top-progress-bar" class="h-full bg-secondary-container rounded-r-full transition-all duration-150" style="width: 0%;"></div>
     </div>
     <!-- Header / TopAppBar -->
     <custom-header active-page="lessons"></custom-header>
@@ -499,6 +499,8 @@
             'A viscous paste is formed.',
             'Ambuyat is produced.'
         ], 'secondary');
+        
+        initScrollTracker('progress-ambuyat', 'top-progress-bar');
     </script>
 
     <custom-footer></custom-footer>
