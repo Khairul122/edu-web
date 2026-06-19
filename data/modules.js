@@ -31,26 +31,59 @@ const MODULES_DATA = [
 function renderModuleCards(containerId, modules) {
     const container = document.getElementById(containerId);
     if (!container) return;
-    container.innerHTML = modules.map((m, i) => `
+    container.innerHTML = modules.map((m, i) => {
+        const storageKey = m.href.includes('ambuyat') ? 'progress-ambuyat' : 'progress-hinava';
+        const savedProgress = localStorage.getItem(storageKey);
+        const progress = savedProgress !== null ? parseInt(savedProgress) : 0;
+
+        let badgeText = m.badge;
+        let badgeColorClass = m.badgeColor || 'bg-primary/90';
+        let actionText = m.actionText;
+
+        if (progress > 0 && progress < 100) {
+            badgeText = 'In Progress';
+            badgeColorClass = 'bg-tertiary-fixed-dim/90';
+            actionText = 'Resume';
+        } else if (progress === 100) {
+            badgeText = 'Completed';
+            badgeColorClass = 'bg-emerald-600';
+            actionText = 'Review';
+        } else {
+            // progress is 0
+            if (m.href.includes('hinava')) {
+                badgeText = '';
+            } else {
+                badgeText = 'New';
+            }
+            actionText = m.href.includes('hinava') ? 'Explore' : 'Resume';
+        }
+
+        // Hide badge if empty
+        const badgeHtml = badgeText 
+            ? `<div class="absolute top-4 right-4 ${badgeColorClass} text-white px-3 py-1 rounded-lg text-xs font-bold">${badgeText}</div>`
+            : '';
+
+        return `
         <a href="${m.href}" data-animate="left" data-delay="${i + 1}"
             class="min-w-[320px] glass-card rounded-2xl overflow-hidden flex-1 group cursor-pointer hover:shadow-xl transition-all duration-300">
             <div class="h-48 relative overflow-hidden">
                 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     src="${m.image}" alt="${m.title}" />
-                <div class="absolute top-4 right-4 ${m.badgeColor} text-white px-3 py-1 rounded-lg text-xs font-bold">${m.badge}</div>
+                ${badgeHtml}
             </div>
             <div class="p-6">
                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">${m.title}</h3>
                 <div class="w-full bg-outline-variant/30 h-2 rounded-full mb-4">
-                    <div class="${m.progressColor} h-full rounded-full transition-all duration-700" style="width: ${m.progress}%"></div>
+                    <div class="${m.progressColor} h-full rounded-full transition-all duration-700" style="width: ${progress}%"></div>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-xs text-on-surface-variant font-label-md">${m.progress}% Completed</span>
+                    <span class="text-xs text-on-surface-variant font-label-md">${progress}% Completed</span>
                     <span class="${m.textColor} font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
-                        ${m.actionText} <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        ${actionText} <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </span>
                 </div>
             </div>
         </a>
-    `).join('');
+        `;
+    }).join('');
 }

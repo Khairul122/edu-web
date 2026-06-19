@@ -58,7 +58,7 @@ class CustomHeader extends HTMLElement {
                     <input type="text" placeholder="Search molecules..."
                         class="border-none focus:ring-0 outline-none bg-transparent text-sm text-on-surface-variant placeholder:text-on-surface-variant w-36">
                 </div>
-                <div class="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant cursor-pointer overflow-hidden hover:brightness-95 transition-all">
+                <div class="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-[#e2e2e6] text-[#7c7c82] cursor-pointer overflow-hidden hover:brightness-95 transition-all">
                     <span class="material-symbols-outlined icon-filled" style="font-size: 20px">person</span>
                 </div>
                 <button class="md:hidden material-symbols-outlined text-primary" id="header-menu-btn">menu</button>
