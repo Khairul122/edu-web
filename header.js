@@ -42,11 +42,13 @@ class CustomHeader extends HTMLElement {
         this.innerHTML = `
     <header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
         <div class="flex items-center justify-between px-4 md:px-8 w-full h-16 md:h-[72px]">
-            <a href="index.html" class="flex items-center gap-2 shrink-0">
-                <img alt="AmvaChem Logo" class="h-10 w-10 object-contain" src="logo.png">
-                <span class="font-bold text-[1.25rem] text-on-surface tracking-tight">AmvaChem</span>
-            </a>
-            <div class="hidden md:flex items-center gap-7">
+            <div class="flex-1 flex justify-start">
+                <a href="index.html" class="flex items-center gap-2 shrink-0">
+                    <img alt="AmvaChem Logo" class="h-10 w-10 object-contain" src="assets/LOGO.png">
+                    <span class="font-bold text-[1.25rem] text-on-surface tracking-tight">AmvaChem</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center justify-center gap-7 shrink-0">
                 <nav class="flex items-center gap-7">
                     ${navHtml.trim()}
                 </nav>
@@ -54,12 +56,7 @@ class CustomHeader extends HTMLElement {
                     ${extraNavHtml.trim()}
                 </nav>
             </div>
-            <div class="flex items-center gap-4">
-                <div class="hidden md:flex items-center gap-2 border border-outline rounded-full px-3 py-1.5 hover:bg-surface-container-low/40 transition-colors">
-                    <span class="material-symbols-outlined text-on-surface-variant" style="font-size:18px">search</span>
-                    <input type="text" placeholder="Search molecules..."
-                        class="border-none focus:ring-0 outline-none bg-transparent text-sm text-on-surface-variant placeholder:text-on-surface-variant w-36">
-                </div>
+            <div class="flex-1 flex justify-end items-center gap-4">
                 <div class="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-[#e2e2e6] text-[#7c7c82] cursor-pointer overflow-hidden hover:brightness-95 transition-all">
                     <span class="material-symbols-outlined icon-filled" style="font-size: 20px">person</span>
                 </div>

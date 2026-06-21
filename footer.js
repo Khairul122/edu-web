@@ -24,10 +24,6 @@ class CustomFooter extends HTMLElement {
                 </div>
             </div>
             <div class="flex flex-col gap-4 items-start md:items-end">
-                <div class="flex gap-4">
-                    <button class="material-symbols-outlined text-primary hover:text-secondary">share</button>
-                    <button class="material-symbols-outlined text-primary hover:text-secondary">mail</button>
-                </div>
             </div>
         </div>
     </footer>

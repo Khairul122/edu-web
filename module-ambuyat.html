@@ -50,7 +50,7 @@
                     <p class="font-body-md text-body-md text-on-surface-variant">
                         Ambuyat is the national dish of Brunei and a staple in the Sabahan districts of Beaufort and
                         Kuala Penyu. Derived from the interior of the sago palm, this translucent starch is more than
-                        just food—it's a masterclass in culinary chemistry.
+                        just food, it's a masterclass in culinary chemistry.
                     </p>
                 </div>
             </div>
@@ -174,40 +174,20 @@
                 </div>
             </div>
         </section>
-        <!-- Quick Quiz -->
+        <!-- Quick Quiz Link -->
         <section data-animate="up" class="space-y-stack-sm pb-12">
-            <h2 class="font-headline-md text-headline-md text-primary">Knowledge Check</h2>
-            <div class="glass-card p-6 rounded-xl space-y-4">
-                <p class="font-headline-sm text-headline-sm text-primary">Why does sago starch thicken during heating?
+            <h2 class="font-headline-md text-headline-md text-primary text-center">Knowledge Check</h2>
+            <div class="glass-card p-8 rounded-xl text-center space-y-4 max-w-xl mx-auto">
+                <p class="text-on-surface-variant font-body-lg">
+                    Ready to test your understanding of what you've learned in this module?
                 </p>
-                <div class="space-y-3" id="quiz-options">
-                    <button onclick="checkAnswer(this, false)"
-                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
-                        <span
-                            class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">A</span>
-                        <span class="font-body-md text-body-md">Water evaporation</span>
-                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
-                    </button>
-                    <button onclick="checkAnswer(this, true)"
-                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
-                        <span
-                            class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">B</span>
-                        <span class="font-body-md text-body-md">Starch granules swelling and bursting</span>
-                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
-                    </button>
-                    <button onclick="checkAnswer(this, false)"
-                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
-                        <span
-                            class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">C</span>
-                        <span class="font-body-md text-body-md">Cooling of the liquid</span>
-                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
-                    </button>
-                </div>
-                <div id="quiz-feedback" class="mt-4 p-3 rounded-lg hidden transition-opacity">
-                    <p id="quiz-feedback-text" class="font-label-sm text-label-sm leading-relaxed">
-                    </p>
-                </div>
+                <button onclick="window.location.href='knowledge-check.html'"
+                    class="bg-secondary text-white px-8 py-3.5 rounded-xl font-bold inline-flex items-center gap-2 active:scale-95 transition-all shadow-md hover:opacity-90">
+                    Go to Knowledge Check
+                    <span class="material-symbols-outlined text-sm">assignment_turned_in</span>
+                </button>
             </div>
+        </section>
 
         <script>
             // Slider Logic
@@ -255,50 +235,7 @@
 
                 tempSlider.dispatchEvent(new Event('input'));
             }
-
-            // Quiz Logic
-            function checkAnswer(btn, isCorrect) {
-                const allBtns = document.querySelectorAll('.quiz-btn');
-                allBtns.forEach(b => {
-                    b.className = "quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant transition-colors flex items-center group opacity-50";
-                    const icon = b.querySelector('.quiz-icon');
-                    if(icon) icon.className = "quiz-icon material-symbols-outlined ml-auto hidden";
-                    const letter = b.querySelector('.quiz-letter');
-                    if(letter) letter.className = "quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm";
-                });
-
-                btn.classList.remove('opacity-50', 'border-outline-variant');
-                const icon = btn.querySelector('.quiz-icon');
-                const letter = btn.querySelector('.quiz-letter');
-                const feedbackBox = document.getElementById('quiz-feedback');
-                const feedbackText = document.getElementById('quiz-feedback-text');
-                
-                icon.classList.remove('hidden');
-
-                if (isCorrect) {
-                    btn.classList.add('border-2', 'border-secondary', 'bg-secondary/5');
-                    letter.classList.add('bg-secondary', 'text-white', 'border-secondary');
-                    letter.classList.remove('border-primary');
-                    icon.classList.add('text-secondary', 'icon-filled');
-                    icon.innerText = "check_circle";
-                    
-                    feedbackBox.className = "mt-4 p-3 rounded-lg transition-opacity bg-secondary/10";
-                    feedbackText.className = "font-label-sm text-label-sm leading-relaxed text-on-secondary-container";
-                    feedbackText.innerHTML = "<strong>Correct!</strong> Gelatinization occurs when heat causes granules to swell with water until they rupture, creating a viscous gel network (Ambuyat).";
-                } else {
-                    btn.classList.add('border-2', 'border-[#ba1a1a]', 'bg-[#ba1a1a]/5');
-                    letter.classList.add('bg-[#ba1a1a]', 'text-white', 'border-[#ba1a1a]');
-                    letter.classList.remove('border-primary');
-                    icon.classList.add('text-[#ba1a1a]');
-                    icon.innerText = "cancel";
-
-                    feedbackBox.className = "mt-4 p-3 rounded-lg transition-opacity bg-[#ba1a1a]/10";
-                    feedbackText.className = "font-label-sm text-label-sm leading-relaxed text-[#ba1a1a]";
-                    feedbackText.innerHTML = "<strong>Incorrect.</strong> Try to recall what happens to the physical structure of starch granules when heated in water.";
-                }
-            }
         </script>
-        </section>
     </main>
 
     <!-- SECTION A: THE CHEMISTRY OF AMBUYAT -->

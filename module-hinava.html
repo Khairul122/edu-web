@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>AmvaChem Module 2: Hinava &amp; Protein Denaturation</title>
+    <title>AmvaChem Module 2: Hinavah &amp; Protein Denaturation</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="tailwind-config.js"></script>
     <link
@@ -42,9 +42,9 @@
             </div>
             <h2 class="font-headline-md text-headline-md text-primary">What is Hinavah?</h2>
             <div class="glass-card rounded-xl overflow-hidden">
-                <img class="w-full h-48 object-cover"
-                    alt="Fresh fish marinated in lime juice for Hinava"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNKG-p5-rNi7L42H27SiTPUOx1t5N8RNHeOGsEIkfLwxKdNx4uJ-2N6unEgUeKdrrnzp6DiWfCQ3vwU4YIOYLrDNTe8RE6rmxrtzL9cSkYA9TS-SIPZsMlthh_ASZmlEYC398SWcGlQbh3K4z_XBNAtl9EIWIf22YURfnXOZonSjFnhGQJT21qMhIQCpXJmfMjLsCKCXyi7P49izQvK6jnkCoTjUJ6bk1ykwEISIi7JbfxZo6AlevdfC9jD5zEYE9IqE21unVO5nMn" />
+                <img class="w-full h-80 object-cover"
+                    alt="Fresh fish marinated in lime juice for Hinavah"
+                    src="assets/FOTO 3.png" />
                 <div class="p-4 space-y-stack-sm">
                     <p class="font-body-md text-body-md text-on-surface-variant">
                         Hinavah is a traditional Kadazan-Dusun dish made from raw fish marinated with
@@ -205,41 +205,18 @@
             </div>
         </section>
 
-        <!-- Quick Quiz -->
+        <!-- Quick Quiz Link -->
         <section data-animate="up" class="space-y-stack-sm pb-12">
-            <h2 class="font-headline-md text-headline-md text-primary">Knowledge Check</h2>
-            <div class="glass-card p-6 rounded-xl space-y-4">
-                <p class="font-headline-sm text-headline-sm text-primary">Which chemical process occurs during Hinavah preparation?
+            <h2 class="font-headline-md text-headline-md text-primary text-center">Knowledge Check</h2>
+            <div class="glass-card p-8 rounded-xl text-center space-y-4 max-w-xl mx-auto">
+                <p class="text-on-surface-variant font-body-lg">
+                    Ready to test your understanding of what you've learned in this module?
                 </p>
-                <div class="space-y-3" id="quiz-options">
-                    <button onclick="checkAnswer(this, false)"
-                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
-                        <span class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">A</span>
-                        <span class="font-body-md text-body-md">Combustion</span>
-                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
-                    </button>
-                    <button onclick="checkAnswer(this, false)"
-                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
-                        <span class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">B</span>
-                        <span class="font-body-md text-body-md">Polymerization</span>
-                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
-                    </button>
-                    <button onclick="checkAnswer(this, true)"
-                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
-                        <span class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">C</span>
-                        <span class="font-body-md text-body-md">Protein Denaturation</span>
-                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
-                    </button>
-                    <button onclick="checkAnswer(this, false)"
-                        class="quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant hover:bg-secondary/10 transition-colors flex items-center group">
-                        <span class="quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm group-hover:bg-primary group-hover:text-white transition-colors">D</span>
-                        <span class="font-body-md text-body-md">Electrolysis</span>
-                        <span class="quiz-icon material-symbols-outlined ml-auto hidden"></span>
-                    </button>
-                </div>
-                <div id="quiz-feedback" class="mt-4 p-3 rounded-lg hidden transition-opacity">
-                    <p id="quiz-feedback-text" class="font-label-sm text-label-sm leading-relaxed"></p>
-                </div>
+                <button onclick="window.location.href='knowledge-check.html'"
+                    class="bg-secondary text-white px-8 py-3.5 rounded-xl font-bold inline-flex items-center gap-2 active:scale-95 transition-all shadow-md hover:opacity-90">
+                    Go to Knowledge Check
+                    <span class="material-symbols-outlined text-sm">assignment_turned_in</span>
+                </button>
             </div>
         </section>
 
@@ -297,48 +274,6 @@
                 });
 
                 phSlider.dispatchEvent(new Event('input'));
-            }
-
-            // Quiz Logic
-            function checkAnswer(btn, isCorrect) {
-                const allBtns = document.querySelectorAll('.quiz-btn');
-                allBtns.forEach(b => {
-                    b.className = "quiz-btn w-full p-4 text-left rounded-lg border border-outline-variant transition-colors flex items-center group opacity-50";
-                    const icon = b.querySelector('.quiz-icon');
-                    if (icon) icon.className = "quiz-icon material-symbols-outlined ml-auto hidden";
-                    const letter = b.querySelector('.quiz-letter');
-                    if (letter) letter.className = "quiz-letter w-6 h-6 rounded-full border border-primary mr-3 flex items-center justify-center font-label-sm text-label-sm";
-                });
-
-                btn.classList.remove('opacity-50', 'border-outline-variant');
-                const icon = btn.querySelector('.quiz-icon');
-                const letter = btn.querySelector('.quiz-letter');
-                const feedbackBox = document.getElementById('quiz-feedback');
-                const feedbackText = document.getElementById('quiz-feedback-text');
-
-                icon.classList.remove('hidden');
-
-                if (isCorrect) {
-                    btn.classList.add('border-2', 'border-secondary', 'bg-secondary/5');
-                    letter.classList.add('bg-secondary', 'text-white', 'border-secondary');
-                    letter.classList.remove('border-primary');
-                    icon.classList.add('text-secondary', 'icon-filled');
-                    icon.innerText = "check_circle";
-
-                    feedbackBox.className = "mt-4 p-3 rounded-lg transition-opacity bg-secondary/10";
-                    feedbackText.className = "font-label-sm text-label-sm leading-relaxed text-on-secondary-container";
-                    feedbackText.innerHTML = "<strong>Correct!</strong> Protein denaturation occurs when the acidic lime juice lowers the pH, causing the protein structure of the fish to unfold and coagulate — mimicking the effects of heat without cooking.";
-                } else {
-                    btn.classList.add('border-2', 'border-[#ba1a1a]', 'bg-[#ba1a1a]/5');
-                    letter.classList.add('bg-[#ba1a1a]', 'text-white', 'border-[#ba1a1a]');
-                    letter.classList.remove('border-primary');
-                    icon.classList.add('text-[#ba1a1a]');
-                    icon.innerText = "cancel";
-
-                    feedbackBox.className = "mt-4 p-3 rounded-lg transition-opacity bg-[#ba1a1a]/10";
-                    feedbackText.className = "font-label-sm text-label-sm leading-relaxed text-[#ba1a1a]";
-                    feedbackText.innerHTML = "<strong>Incorrect.</strong> Think about what acid does to the protein structure of raw fish during marination.";
-                }
             }
         </script>
     </main>

@@ -115,7 +115,7 @@ The design system bridges traditional Sabahan culinary heritage with rigorous ch
 The visual style is **Corporate Modern with Glassmorphism**. This approach uses a highly structured layout to ensure academic clarity, while employing translucent layers and soft background blurs to simulate the organic, fluid nature of sago starch and coastal environments. Backgrounds should feature subtle, low-opacity geometric motifs inspired by Sabah textile patterns (Linangkit) integrated with molecular honeycomb structures.
 
 ## Colors
-The palette is derived from the raw ingredients of Ambuyat and Hinava.
+The palette is derived from the raw ingredients of Ambuyat and Hinavah.
 - **Sago Beige (Neutral):** Acts as the primary canvas color, replacing harsh whites to provide a warmer, organic reading experience.
 - **Earth Brown (Primary):** Used for typography, primary navigation, and structural elements to ground the design in stability.
 - **Ocean Blue (Secondary):** Used for interactive elements, scientific diagrams, and "Discovery" actions.

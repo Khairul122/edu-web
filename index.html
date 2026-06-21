@@ -53,18 +53,18 @@
                     AmvaChem: Chemistry Through Sabah Food Heritage
                 </h1>
                 <p data-animate="up" data-delay="2" class="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                    Discover the molecular secrets behind Ambuyat and Hinava. Bridge ancestral wisdom with modern
+                    Discover the molecular secrets behind Ambuyat and Hinavah. Bridge ancestral wisdom with modern
                     scientific inquiry.
                 </p>
                 <div data-animate="up" data-delay="3" class="flex flex-col sm:flex-row gap-4">
-                    <button onclick="window.alert('Feature is currently under development. Stay tuned!')"
+                    <button onclick="window.location.href='sabah-food-heritage.html'"
                         class="bg-primary text-white px-8 py-4 rounded-xl font-bold font-headline-sm text-headline-sm hover:shadow-lg transition-all active:scale-95">
                         Start Learning
                     </button>
-                        <button onclick="window.alert('Feature is currently under development. Stay tuned!')"
-                            class="bg-gradient-to-r from-secondary to-tertiary-fixed-dim text-white px-8 py-4 rounded-xl font-bold font-headline-sm text-headline-sm hover:opacity-90 transition-all active:scale-95">
-                            Explore Modules
-                        </button>
+                    <button onclick="document.getElementById('active-modules').scrollIntoView({ behavior: 'smooth' })"
+                        class="bg-gradient-to-r from-secondary to-tertiary-fixed-dim text-white px-8 py-4 rounded-xl font-bold font-headline-sm text-headline-sm hover:opacity-90 transition-all active:scale-95">
+                        Explore Modules
+                    </button>
                 </div>
             </div>
         </section>
@@ -100,12 +100,12 @@
                     </div>
                     <h4 class="font-bold mb-2">Protein Denaturation</h4>
                     <p class="text-sm text-on-surface-variant">Acid-induced structural changes in fresh fish during
-                        Hinava preparation.</p>
+                        Hinavah preparation.</p>
                 </div>
             </div>
         </section>
         <!-- Learning Modules (Swipeable feel) -->
-        <section class="bg-surface-container-low py-stack-lg px-margin-mobile md:px-margin-desktop">
+        <section id="active-modules" class="bg-surface-container-low py-stack-lg px-margin-mobile md:px-margin-desktop">
             <div class="max-w-container-max mx-auto">
                 <div data-animate="up" class="flex justify-between items-end mb-stack-md">
                     <div>
@@ -152,14 +152,14 @@
                         class="min-w-[320px] glass-card rounded-2xl overflow-hidden flex-1 group">
                         <div class="h-48 relative">
                             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                data-alt="Close up of fresh fish being marinated in lime juice for Hinava, with visible citrus droplets and sliced chilies. The lighting is bright and airy. Superimposed are abstract chemical structures of protein chains unfolding, using a soft ocean blue and lime green color palette to represent the acidic denaturation process."
+                                data-alt="Close up of fresh fish being marinated in lime juice for Hinavah, with visible citrus droplets and sliced chilies. The lighting is bright and airy. Superimposed are abstract chemical structures of protein chains unfolding, using a soft ocean blue and lime green color palette to represent the acidic denaturation process."
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNKG-p5-rNi7L42H27SiTPUOx1t5N8RNHeOGsEIkfLwxKdNx4uJ-2N6unEgUeKdrrnzp6DiWfCQ3vwU4YIOYLrDNTe8RE6rmxrtzL9cSkYA9TS-SIPZsMlthh_ASZmlEYC398SWcGlQbh3K4z_XBNAtl9EIWIf22YURfnXOZonSjFnhGQJT21qMhIQCpXJmfMjLsCKCXyi7P49izQvK6jnkCoTjUJ6bk1ykwEISIi7JbfxZo6AlevdfC9jD5zEYE9IqE21unVO5nMn" />
                             <div id="badge-hinava"
                                 class="absolute top-4 right-4 bg-tertiary-fixed-dim/90 text-white px-3 py-1 rounded-lg text-xs font-bold hidden">
                                 In Progress</div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Module 2: Hinava &amp;
+                            <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Module 2: Hinavah &amp;
                                 Protein Denaturation</h3>
                             <div class="w-full bg-outline-variant/30 h-2 rounded-full mb-4">
                                 <div id="progress-bar-hinava" class="bg-tertiary-fixed-dim h-full rounded-full w-[20%] transition-all duration-700"></div>
@@ -170,36 +170,6 @@
                                     class="text-tertiary font-bold flex items-center gap-1 hover:gap-2 transition-all">
                                     <span id="action-text-hinava">Explore</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                                 </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Virtual Lab Teaser -->
-        <section class="py-stack-lg px-margin-mobile md:px-margin-desktop">
-            <div data-animate="up"
-                class="max-w-container-max mx-auto glass-card rounded-3xl overflow-hidden bg-primary-container relative">
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="p-8 md:p-12 flex-1 z-10">
-                        <h2 class="font-display-lg text-primary-fixed mb-4">Step into the Lab</h2>
-                        <p class="text-primary-fixed-dim body-lg mb-8">Experience chemical reactions in a 3D
-                            environment. Manipulate heat, pH levels, and catalysts to see how traditional foods
-                            transform at a molecular level.</p>
-                        <button onclick="window.alert('Feature is currently under development. Stay tuned!')"
-                            class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-bold flex items-center gap-3 active:scale-95 duration-200">
-                            Launch Virtual Lab
-                            <span class="material-symbols-outlined">rocket_launch</span>
-                        </button>
-                    </div>
-                    <div class="flex-1 w-full h-[300px] md:h-full relative overflow-hidden bg-surface-dim">
-                        <img class="w-full h-full object-cover opacity-60"
-                            data-alt="A futuristic virtual reality laboratory interface showing a 3D animated model of a starch molecule being hydrated. The visual style is high-tech yet approachable, with translucent glass UI panels, glowing teal and earth brown nodes, and a soft blurred background of a modern science center in Sabah."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0bfrSerksqShAqVejWyZMhCjZWaDSKzUYIbZkKxuImvyDyvZPx_NQ-707kg97cry_Kj1enUCXsnGgjuZtZtZcFqD0jNgl_CHBHiz_iA6V4XdaUBvNUjRDmx886oIR-E_ttZsLzDPdFYWwz8He8lfBpN_dalFXffzWKpCWD87pljjp7mUiOP_JMHsxJGxK4ftyjTJlX-N7IkAQ7pbCTksUItzpEN0VX2yAZx8d_NG-2qzVmFaIDis0luO6zn5yQjCgiEPhFJ-pkT5M" />
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div
-                                class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 animate-pulse">
-                                <span class="material-symbols-outlined text-white text-4xl">play_arrow</span>
                             </div>
                         </div>
                     </div>
@@ -217,17 +187,17 @@
                     <div data-animate="up" data-delay="1" class="w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] aspect-square rounded-xl overflow-hidden glass-card">
                         <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                             data-alt="A candid documentary-style photograph of a Sabahan elder skillfully preparing sago starch in a traditional wooden trough. The lighting is warm and natural, emphasizing the organic textures of the wood and the starch paste. The style is respectful and high-quality, capturing the living heritage of Sabah."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsymIpv8oKqcO3hLSG7nhERQ7-YLOw7B3rBxe4ZbTXwtXQEDgyVoYu5yZDbixckXfWqO2cQXnsQZVbzx69S3jGwcXb933DDrfDS5asR283w2SuEZ9oPa2N4s2-XgO8HL1Xfcxt_GGztdabQ91h_4zcJpQG27LmabUxejxdeALobWhtRaa-4AVn4g5PxPtfjG8ydd3nyBpAH3XL_nu6abdBqVCkmglMHVlr30OtQUumJQ5lGbop5tTV_BjxaV33_lIdKIvR_B4225qH" />
+                            src="assets/FOTO 1.png" />
                     </div>
                     <div data-animate="up" data-delay="2" class="w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] aspect-square rounded-xl overflow-hidden glass-card">
                         <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                            data-alt="A vibrant still life of fresh ingredients for Hinava: wild ginger (bambangan), lime, red chilies, and fresh raw fish, arranged artistically on a banana leaf. The colors are punchy and saturated, emphasizing the freshness and the chemical components that lead to protein denaturation."
+                            data-alt="A vibrant still life of fresh ingredients for Hinavah: wild ginger (bambangan), lime, red chilies, and fresh raw fish, arranged artistically on a banana leaf. The colors are punchy and saturated, emphasizing the freshness and the chemical components that lead to protein denaturation."
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5UbcX8S0XzcAShi2mvGXoT6k1x0Jk_9HAr1welLPbrS9WUJywdn7Hxk3ZlMXRyUuJ3G15HN7SQnWiAvb-SEtlrDv0MPTfSOvUtOkJkan8ebsL1YuevFeqfj-BBMuQMkxQHbSERqeR-AlKI1e6cfZP0cDFkZ2XFibqqCIRY4BWB16L0TgVzSaNPs189X-A9OKgcL1DYX5gzOZd5bw7hM_Mrs55EmthrU5TeTDTaj7DymjGWI39nHj2_p1ezNpo_AkUgHSndZxV2njV" />
                     </div>
                     <div data-animate="up" data-delay="3" class="w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] aspect-square rounded-xl overflow-hidden glass-card">
                         <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                             data-alt="An atmospheric wide shot of a traditional Sabahan community kitchen during a celebration. Steam rises from large pots of boiling water used for Ambuyat preparation, catching the shafts of morning light entering through bamboo walls. The mood is communal and academic, highlighting food as the heart of culture."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoeGhjB-7yRi2iheQnlAFbWNUnTANg2pdP_ytLfoTDt1yYH439v3MzDynIxXDEOGPEpvmQ3NpOO4bCB5Sv4Nym99KDShcS84GOT8ZJC1U2jzzHvdro6zOx4aJPRN7y2Akh6lOs6CNHIKvKmS08ZdZPM_N5gviQPwg68TgbCPPweqVFQ-gUHkSUSQSjSICVh-vRakZs40O24XKrFdvqUJsRRU6-E93gDOZXTIOXs41CM7Qsgn1Na-ugMOh0vCJQ8Cc2z8pQ4nXDW-W4" />
+                            src="assets/FOTO 2.png" />
                     </div>
                 </div>
             </div>
@@ -258,7 +228,7 @@
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="material-symbols-outlined text-sm mt-1">description</span>
-                                <span>Protein Analysis of Traditional Hinava Preparations.</span>
+                                <span>Protein Analysis of Traditional Hinavah Preparations.</span>
                             </li>
                         </ul>
                     </div>
@@ -270,11 +240,6 @@
     <custom-footer></custom-footer>
     <!-- BottomNavBar -->
     <bottom-navbar active-page="home"></bottom-navbar>
-    <!-- FAB -->
-    <button
-        class="fixed bottom-24 right-6 md:bottom-12 md:right-12 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center z-40 active:scale-95 transition-all">
-        <span class="material-symbols-outlined text-3xl">add_task</span>
-    </button>
     <script src="header.js"></script>
     <script src="bottom-navbar.js"></script>
     <script src="animations.js"></script>

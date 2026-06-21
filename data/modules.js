@@ -15,7 +15,7 @@ const MODULES_DATA = [
     },
     {
         id: 2,
-        title: "Module 2: Hinava &amp; Protein Denaturation",
+        title: "Module 2: Hinavah &amp; Protein Denaturation",
         href: "module-hinava.html",
         progress: 20,
         badge: "In Progress",
